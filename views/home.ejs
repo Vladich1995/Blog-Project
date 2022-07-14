@@ -1,0 +1,10 @@
+<%- include("partials/header") -%>
+<h1>Home</h1>
+<p><%= home %></p>
+<% addPosts.forEach(function(post){ %>
+  <div class="">
+    <label><h1><%= post.title %></h1></label>
+    <p><%= post.text.slice(0,100) + " ..." %><a style = "cursor: pointer;" href="posts/<%= post.title %>">Read More</a></p>
+  </div>
+<%}); %>
+<%- include("partials/footer") -%>
